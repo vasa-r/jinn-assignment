@@ -1,0 +1,56 @@
+.container {
+  flex: 1;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.userCont {
+  justify-content: flex-end;
+  display: flex;
+}
+
+.botCont {
+  justify-content: flex-start;
+  display: flex;
+}
+
+.textContainer {
+  display: inline-flex;
+  width: 100%;
+}
+
+.container p {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20.43px;
+}
+
+.user {
+  text-align: left;
+  color: #fff;
+  padding: 12px 18px;
+  display: inline-flex;
+  background-color: #000;
+  border-radius: 10px 10px 0 10px;
+}
+
+.bot {
+  text-align: left;
+  color: #222;
+  padding: 12px 18px;
+  display: inline-flex;
+  background-color: #f0f0f0;
+  border-radius: 0 10px 10px 10px;
+}
+
+.mainBotCon {
+  display: flex;
+}
+
+.mainBotCon img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}

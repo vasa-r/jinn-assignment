@@ -1,5 +1,11 @@
 .chatContainer {
-  height: 100%;
-  width: 25%;
-  border: 1px solid black;
+  height: 85%;
+  width: 26rem;
+  /* border: 1px solid black; */
+  align-self: flex-end;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
 }

@@ -3,8 +3,8 @@ import ChatBot from "./components/ChatBot/ChatBot";
 
 const App = () => {
   return (
-    <div className={styles.root}>
-      <div className={styles.appContainer}>
+    <div className={styles.app}>
+      <div className={styles.container}>
         <div></div>
         <ChatBot />
       </div>

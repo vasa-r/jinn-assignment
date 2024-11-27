@@ -1,13 +1,12 @@
-.root {
-  width: 100vw;
-  height: 100vh;
+.app {
   background-color: #3296d7;
+  height: 100vh;
+  padding: 2.5rem 1rem;
 }
 
-.appContainer {
-  padding: 2.5rem 1rem;
+.container {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   height: 100%;
 }
