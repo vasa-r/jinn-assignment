@@ -6,7 +6,7 @@ import {
   useEffect,
   useState,
 } from "react";
-import { defaultBtn, defaultBubbles } from "../util/constants";
+import { defaultBtn, defaultBubbles, defaultTxt } from "../util/constants";
 
 interface BtnType {
   icon: string;
@@ -21,6 +21,11 @@ interface BubbleType {
   userTextColor: string;
 }
 
+interface TextType {
+  fontSize: string;
+  fontFam: string;
+}
+
 interface AppContextType {
   buttonData: BtnType;
   updateBotButton: (icon: string, bg: string, bradius: string) => void;
@@ -33,6 +38,8 @@ interface AppContextType {
     userBg: string,
     userTxtColor: string
   ) => void;
+  textData: TextType;
+  updateTextData: (fontSize: string, fontFam: string) => void;
 }
 
 interface AppContextProps {
@@ -53,6 +60,7 @@ const AppProvider = ({ children }: AppContextProps) => {
   const [buttonData, setButtonData] = useState(defaultBtn);
   const [titleBg, setTitleBg] = useState("#000000");
   const [bubblesData, setBubblesData] = useState(defaultBubbles);
+  const [textData, setTextData] = useState(defaultTxt);
 
   useEffect(() => {
     console.log(buttonData);
@@ -86,6 +94,14 @@ const AppProvider = ({ children }: AppContextProps) => {
     }));
   };
 
+  const updateTextData = (fontSize: string, fontFam: string) => {
+    setTextData((prev) => ({
+      ...prev,
+      fontSize: fontSize,
+      fontFam: fontFam,
+    }));
+  };
+
   const values = {
     buttonData,
     updateBotButton,
@@ -93,6 +109,8 @@ const AppProvider = ({ children }: AppContextProps) => {
     updateTitleBg,
     bubblesData,
     updateBubblesData,
+    textData,
+    updateTextData,
   };
   return <AppContext.Provider value={values}>{children}</AppContext.Provider>;
 };

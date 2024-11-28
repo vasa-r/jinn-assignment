@@ -109,3 +109,8 @@ export const defaultBubbles = {
   userBg: "#000000",
   userTextColor: "#ffffff",
 };
+
+export const defaultTxt = {
+  fontSize: "16px",
+  fontFam: "'Open Sans', sans-serif",
+};
