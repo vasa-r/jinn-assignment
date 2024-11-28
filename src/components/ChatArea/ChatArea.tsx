@@ -6,7 +6,7 @@ const ChatArea = () => {
   const { bubblesData, textData } = useAppContext();
   const { botBg, userBg, botTextColor, userTextColor } = bubblesData;
   const { fontFam, fontSize } = textData;
-  console.log(fontSize);
+
   return (
     <div className={styles.container} style={{ fontFamily: fontFam }}>
       <div className={`${styles.textContainer} ${styles.userCont}`}>

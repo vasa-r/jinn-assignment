@@ -17,7 +17,7 @@ const Text = () => {
     e.stopPropagation();
 
     const selected = e.currentTarget.getAttribute("font-size") || "";
-    console.log(selected);
+
     if (selected) {
       setFont(selected);
     } else {

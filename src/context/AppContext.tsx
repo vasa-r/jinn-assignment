@@ -1,11 +1,5 @@
 /* eslint-disable react-refresh/only-export-components */
-import {
-  createContext,
-  ReactNode,
-  useContext,
-  useEffect,
-  useState,
-} from "react";
+import { createContext, ReactNode, useContext, useState } from "react";
 import { defaultBtn, defaultBubbles, defaultTxt } from "../util/constants";
 
 interface BtnType {
@@ -61,10 +55,6 @@ const AppProvider = ({ children }: AppContextProps) => {
   const [titleBg, setTitleBg] = useState("#000000");
   const [bubblesData, setBubblesData] = useState(defaultBubbles);
   const [textData, setTextData] = useState(defaultTxt);
-
-  useEffect(() => {
-    console.log(buttonData);
-  }, [buttonData]);
 
   const updateBotButton = (icon: string, bg: string, bradius: string) => {
     setButtonData((prev) => ({
