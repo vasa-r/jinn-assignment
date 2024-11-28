@@ -16,7 +16,7 @@ const Text = () => {
   const handleSize = (e: React.MouseEvent<HTMLDivElement>) => {
     e.stopPropagation();
 
-    const selected = e.currentTarget.getAttribute("font-size") || "";
+    const selected = e.currentTarget.getAttribute("font-s") || "";
 
     if (selected) {
       setFont(selected);
@@ -44,7 +44,7 @@ const Text = () => {
               key={id}
               className={styles.div}
               onClick={handleSize}
-              font-size={fontSize}
+              font-s={fontSize}
             >
               {name}
             </div>
