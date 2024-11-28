@@ -19,5 +19,13 @@
 
 .container img {
   width: 24px;
+  height: 24px;
   cursor: pointer;
+}
+
+.btn {
+  padding: 10px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

@@ -5,7 +5,9 @@ const BotFooter = () => {
   return (
     <div className={styles.container}>
       <input type="text" name="" id="" placeholder="Ask us anything..." />
-      <img src={Send} alt="send" />
+      <div className={styles.btn}>
+        <img src={Send} alt="send" />
+      </div>
     </div>
   );
 };

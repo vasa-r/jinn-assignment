@@ -1,0 +1,10 @@
+.root {
+  margin-top: 1.2rem;
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  background: #e0e0e0;
+  max-width: 800px;
+  border: 1px solid #e0e0e0;
+}

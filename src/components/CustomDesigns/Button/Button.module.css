@@ -1,0 +1,84 @@
+h2 {
+  margin-bottom: 0.5rem;
+}
+
+.spread {
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 10px;
+}
+
+.img {
+  height: 40px;
+  width: 40px;
+}
+
+.imgDiv {
+  height: 50px;
+  width: 50px;
+  border: 1px solid black;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.btn .img {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.btn {
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.colorPick {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.colorPick .colorPicker {
+  cursor: pointer;
+  height: 100%;
+}
+
+.colorPick label {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: #919191;
+  margin: 20px 0;
+}
+
+.radiusInput {
+  height: 100%;
+  width: 50px;
+  padding: 0 6px;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.radImg {
+  height: 25px;
+  width: 25px;
+}

@@ -1,0 +1,31 @@
+h2 {
+  margin-bottom: 0.5rem;
+}
+
+.spread {
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 10px;
+}
+
+.imgDiv {
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+}
+
+.colorPick {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.colorPick .colorPicker {
+  cursor: pointer;
+  height: 100%;
+}
+
+.colorPick label {
+  font-size: 14px;
+  font-weight: 500;
+}
