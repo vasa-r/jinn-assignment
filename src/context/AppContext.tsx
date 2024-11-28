@@ -6,7 +6,7 @@ import {
   useEffect,
   useState,
 } from "react";
-import { defaultBtn } from "../util/constants";
+import { defaultBtn, defaultBubbles } from "../util/constants";
 
 interface BtnType {
   icon: string;
@@ -14,11 +14,25 @@ interface BtnType {
   borderRadius: string;
 }
 
+interface BubbleType {
+  botBg: string;
+  botTextColor: string;
+  userBg: string;
+  userTextColor: string;
+}
+
 interface AppContextType {
   buttonData: BtnType;
   updateBotButton: (icon: string, bg: string, bradius: string) => void;
   titleBg: string;
   updateTitleBg: (bg: string) => void;
+  bubblesData: BubbleType;
+  updateBubblesData: (
+    botBg: string,
+    botTxtColor: string,
+    userBg: string,
+    userTxtColor: string
+  ) => void;
 }
 
 interface AppContextProps {
@@ -38,6 +52,7 @@ export const useAppContext = () => {
 const AppProvider = ({ children }: AppContextProps) => {
   const [buttonData, setButtonData] = useState(defaultBtn);
   const [titleBg, setTitleBg] = useState("#000000");
+  const [bubblesData, setBubblesData] = useState(defaultBubbles);
 
   useEffect(() => {
     console.log(buttonData);
@@ -56,7 +71,29 @@ const AppProvider = ({ children }: AppContextProps) => {
     setTitleBg(bg);
   };
 
-  const values = { buttonData, updateBotButton, titleBg, updateTitleBg };
+  const updateBubblesData = (
+    botBg: string,
+    botTxtColor: string,
+    userBg: string,
+    userTxtColor: string
+  ) => {
+    setBubblesData((prev) => ({
+      ...prev,
+      botBg,
+      botTextColor: botTxtColor,
+      userBg,
+      userTextColor: userTxtColor,
+    }));
+  };
+
+  const values = {
+    buttonData,
+    updateBotButton,
+    titleBg,
+    updateTitleBg,
+    bubblesData,
+    updateBubblesData,
+  };
   return <AppContext.Provider value={values}>{children}</AppContext.Provider>;
 };
 
