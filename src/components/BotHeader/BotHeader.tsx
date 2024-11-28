@@ -1,10 +1,12 @@
 import styles from "./BotHeader.module.css";
 import Close from "../../assets/cross.svg";
 import BotImage from "../../assets/chat.jpg";
+import { useAppContext } from "../../context/AppContext";
 
 const BotHeader = () => {
+  const { titleBg } = useAppContext();
   return (
-    <div className={styles.header}>
+    <div className={styles.header} style={{ background: titleBg }}>
       <div className={styles.botMeta}>
         <img src={BotImage} alt="BotImage" />
         <div className={styles.metaData}>

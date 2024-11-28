@@ -1,10 +1,16 @@
 import styles from "./TitleArea.module.css";
 import Card from "../../Card/Card";
 import { buttonColors } from "../../../util/constants";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useAppContext } from "../../../context/AppContext";
 
 const TitleArea = () => {
-  const [backgroundColor, setBackgroundColor] = useState<string>("#ffffff");
+  const { updateTitleBg, titleBg } = useAppContext();
+  const [backgroundColor, setBackgroundColor] = useState<string>(titleBg);
+  useEffect(() => {
+    updateTitleBg(backgroundColor);
+  }, [backgroundColor]);
+
   return (
     <Card>
       <h2>Change your title area</h2>
@@ -17,6 +23,7 @@ const TitleArea = () => {
               className={styles.imgDiv}
               title={name}
               style={{ backgroundColor: backgroundColor }}
+              onClick={() => updateTitleBg(backgroundColor)}
             ></div>
           ))}
           <div className={styles.colorPick}>

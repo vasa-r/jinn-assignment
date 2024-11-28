@@ -17,6 +17,8 @@ interface BtnType {
 interface AppContextType {
   buttonData: BtnType;
   updateBotButton: (icon: string, bg: string, bradius: string) => void;
+  titleBg: string;
+  updateTitleBg: (bg: string) => void;
 }
 
 interface AppContextProps {
@@ -35,6 +37,7 @@ export const useAppContext = () => {
 
 const AppProvider = ({ children }: AppContextProps) => {
   const [buttonData, setButtonData] = useState(defaultBtn);
+  const [titleBg, setTitleBg] = useState("#000000");
 
   useEffect(() => {
     console.log(buttonData);
@@ -48,8 +51,12 @@ const AppProvider = ({ children }: AppContextProps) => {
       borderRadius: bradius,
     }));
   };
-  const values = { buttonData, updateBotButton };
 
+  const updateTitleBg = (bg: string) => {
+    setTitleBg(bg);
+  };
+
+  const values = { buttonData, updateBotButton, titleBg, updateTitleBg };
   return <AppContext.Provider value={values}>{children}</AppContext.Provider>;
 };
 
