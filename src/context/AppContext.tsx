@@ -17,6 +17,7 @@ interface BubbleType {
 
 interface TextType {
   fontSize: string;
+  lineHeight: string;
   fontFam: string;
 }
 

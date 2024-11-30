@@ -68,18 +68,19 @@ type FontSizeData = {
   id: string;
   name: string;
   fontSize: string;
+  lineHeight: string;
 };
 
 export const fontSizes: FontSizeData[] = [
-  { id: "1", name: "0.5", fontSize: "0.5rem" }, // Font size 1
-  { id: "2", name: "0.8", fontSize: "0.8rem" }, // Font size 2
-  { id: "3", name: "1", fontSize: "1rem" }, // Font size 3
-  { id: "4", name: "1.2", fontSize: "1.2rem" }, // Font size 4
-  { id: "5", name: "1.5", fontSize: "1.5rem" }, // Font size 5
-  { id: "6", name: "1.8", fontSize: "1.8rem" }, // Font size 6
-  { id: "7", name: "2", fontSize: "2rem" }, // Font size 7
-  { id: "8", name: "2.2", fontSize: "2.2rem" }, // Font size 8
-  { id: "9", name: "2.5", fontSize: "2.5rem" }, // Font size 9
+  { id: "1", name: "0.5", fontSize: "0.5rem", lineHeight: "0.75rem" }, // Font size 1
+  { id: "2", name: "0.8", fontSize: "0.8rem", lineHeight: "1.2rem" }, // Font size 2
+  { id: "3", name: "1", fontSize: "1rem", lineHeight: "1.5rem" }, // Font size 3
+  { id: "4", name: "1.2", fontSize: "1.2rem", lineHeight: "1.8rem" }, // Font size 4
+  { id: "5", name: "1.5", fontSize: "1.5rem", lineHeight: "2.25rem" }, // Font size 5
+  { id: "6", name: "1.8", fontSize: "1.8rem", lineHeight: "2.7rem" }, // Font size 6
+  { id: "7", name: "2", fontSize: "2rem", lineHeight: "3rem" }, // Font size 7
+  { id: "8", name: "2.2", fontSize: "2.2rem", lineHeight: "3.3rem" }, // Font size 8
+  { id: "9", name: "2.5", fontSize: "2.5rem", lineHeight: "3.75rem" }, // Font size 9
 ];
 
 type FontFamilyData = {

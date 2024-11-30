@@ -7,6 +7,9 @@ import { useAppContext } from "../../../context/AppContext";
 const Text = () => {
   const { textData, updateTextData } = useAppContext();
   const [font, setFont] = useState<string>(textData.fontSize);
+  const [lineHeight, setLineHeight] = useState<string>(
+    textData.lineHeight || "1.5rem"
+  );
   const [fontFam, setFontFam] = useState<string>(textData.fontFam);
 
   useEffect(() => {
@@ -17,9 +20,12 @@ const Text = () => {
     e.stopPropagation();
 
     const selected = e.currentTarget.getAttribute("font-s") || "";
+    const selectedLineHeight =
+      e.currentTarget.getAttribute("line-height") || "";
 
     if (selected) {
       setFont(selected);
+      setLineHeight(selectedLineHeight);
     } else {
       console.warn("No font selected!");
     }
@@ -39,12 +45,13 @@ const Text = () => {
       <div className={styles.type}>
         <h3>1. Text font size (In rem)</h3>
         <div className={styles.spread}>
-          {fontSizes.map(({ id, name, fontSize }) => (
+          {fontSizes.map(({ id, name, fontSize, lineHeight }) => (
             <div
               key={id}
               className={styles.div}
               onClick={handleSize}
               font-s={fontSize}
+              line-height={lineHeight}
             >
               {name}
             </div>
