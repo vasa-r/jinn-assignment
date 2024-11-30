@@ -113,5 +113,6 @@ export const defaultBubbles = {
 
 export const defaultTxt = {
   fontSize: "16px",
+  lineHeight: "1.5rem",
   fontFam: "'Open Sans', sans-serif",
 };

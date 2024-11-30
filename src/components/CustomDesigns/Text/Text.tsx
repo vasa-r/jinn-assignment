@@ -13,8 +13,8 @@ const Text = () => {
   const [fontFam, setFontFam] = useState<string>(textData.fontFam);
 
   useEffect(() => {
-    updateTextData(font, fontFam);
-  }, [font, fontFam]);
+    updateTextData(font, fontFam, lineHeight);
+  }, [font, fontFam, lineHeight]);
 
   const handleSize = (e: React.MouseEvent<HTMLDivElement>) => {
     e.stopPropagation();

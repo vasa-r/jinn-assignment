@@ -34,7 +34,11 @@ interface AppContextType {
     userTxtColor: string
   ) => void;
   textData: TextType;
-  updateTextData: (fontSize: string, fontFam: string) => void;
+  updateTextData: (
+    fontSize: string,
+    fontFam: string,
+    lineHeight: string
+  ) => void;
 }
 
 interface AppContextProps {
@@ -85,10 +89,15 @@ const AppProvider = ({ children }: AppContextProps) => {
     }));
   };
 
-  const updateTextData = (fontSize: string, fontFam: string) => {
+  const updateTextData = (
+    fontSize: string,
+    fontFam: string,
+    lineHeight: string
+  ) => {
     setTextData((prev) => ({
       ...prev,
       fontSize: fontSize,
+      lineHeight: lineHeight,
       fontFam: fontFam,
     }));
   };

@@ -5,7 +5,8 @@ import { useAppContext } from "../../context/AppContext";
 const ChatArea = () => {
   const { bubblesData, textData } = useAppContext();
   const { botBg, userBg, botTextColor, userTextColor } = bubblesData;
-  const { fontFam, fontSize } = textData;
+  const { fontFam, fontSize, lineHeight } = textData;
+  console.log(lineHeight);
 
   return (
     <div className={styles.container} style={{ fontFamily: fontFam }}>
@@ -16,6 +17,7 @@ const ChatArea = () => {
             color: userTextColor,
             backgroundColor: userBg,
             fontSize: fontSize,
+            lineHeight: lineHeight,
           }}
         >
           Hello Jinn
@@ -30,6 +32,7 @@ const ChatArea = () => {
               color: botTextColor,
               backgroundColor: botBg,
               fontSize: fontSize,
+              lineHeight: lineHeight,
             }}
           >
             Hello Anurag! How can I help you today?
